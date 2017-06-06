@@ -1,0 +1,6 @@
+framework module Pods_Union_Social {
+  umbrella header "Pods-Union Social-umbrella.h"
+
+  export *
+  module * { export * }
+}
