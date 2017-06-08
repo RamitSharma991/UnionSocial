@@ -11,10 +11,10 @@
 		311A7DD61EE6A0EB00569661 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7DD51EE6A0EB00569661 /* SignInVC.swift */; };
 		311A7DD91EE6A0EB00569661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311A7DD71EE6A0EB00569661 /* Main.storyboard */; };
 		311A7DDC1EE6A0EB00569661 /* Union_Social.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 311A7DDA1EE6A0EB00569661 /* Union_Social.xcdatamodeld */; };
-		311A7DDE1EE6A0EB00569661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7DDD1EE6A0EB00569661 /* Assets.xcassets */; };
 		311A7DE11EE6A0EB00569661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 311A7DDF1EE6A0EB00569661 /* LaunchScreen.storyboard */; };
 		311A7DEC1EE6A0ED00569661 /* Union_SocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7DEB1EE6A0ED00569661 /* Union_SocialTests.swift */; };
 		311A7DF71EE6A1D700569661 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 311A7DF61EE6A1D700569661 /* GoogleService-Info.plist */; };
+		311A7E021EE7CBFB00569661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311A7E011EE7CBFB00569661 /* Assets.xcassets */; };
 		FF494DDEAD583BF9DC0786C0 /* Pods_Union_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06606D063FE478B939344822 /* Pods_Union_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,13 +36,13 @@
 		311A7DD51EE6A0EB00569661 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		311A7DD81EE6A0EB00569661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		311A7DDB1EE6A0EB00569661 /* Union_Social.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Union_Social.xcdatamodel; sourceTree = "<group>"; };
-		311A7DDD1EE6A0EB00569661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		311A7DE01EE6A0EB00569661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		311A7DE21EE6A0EB00569661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311A7DE71EE6A0ED00569661 /* Union SocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Union SocialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311A7DEB1EE6A0ED00569661 /* Union_SocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Union_SocialTests.swift; sourceTree = "<group>"; };
 		311A7DED1EE6A0ED00569661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311A7DF61EE6A1D700569661 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		311A7E011EE7CBFB00569661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65C695E43F4DF245AA12D0C2 /* Pods-Union Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Union Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Union Social/Pods-Union Social.debug.xcconfig"; sourceTree = "<group>"; };
 		E3512F1F6D36E61D1E3B3A30 /* Pods_Union_SocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Union_SocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,8 +118,8 @@
 			children = (
 				311A7DD31EE6A0EB00569661 /* AppDelegate.swift */,
 				311A7DD71EE6A0EB00569661 /* Main.storyboard */,
-				311A7DDD1EE6A0EB00569661 /* Assets.xcassets */,
 				311A7DDF1EE6A0EB00569661 /* LaunchScreen.storyboard */,
+				311A7E011EE7CBFB00569661 /* Assets.xcassets */,
 				311A7DE21EE6A0EB00569661 /* Info.plist */,
 				311A7DDA1EE6A0EB00569661 /* Union_Social.xcdatamodeld */,
 				311A7DF61EE6A1D700569661 /* GoogleService-Info.plist */,
@@ -242,7 +242,7 @@
 			files = (
 				311A7DE11EE6A0EB00569661 /* LaunchScreen.storyboard in Resources */,
 				311A7DF71EE6A1D700569661 /* GoogleService-Info.plist in Resources */,
-				311A7DDE1EE6A0EB00569661 /* Assets.xcassets in Resources */,
+				311A7E021EE7CBFB00569661 /* Assets.xcassets in Resources */,
 				311A7DD91EE6A0EB00569661 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
