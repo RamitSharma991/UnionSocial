@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import FBSDKCoreKit
+import Firebase
 
 class SignInVC: UIViewController {
 
@@ -20,6 +23,59 @@ class SignInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    
+    //FACEBOOK CODE
+    
+    
+    
+    @IBAction func facebookButtonTapped(_ sender: Any) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            
+            if error != nil {
+                
+                print("Noddy: Unable to authenticate with Facebook - \(String(describing: error))")
+        
+            } else if result?.isCancelled == true {
+                
+                print("Toby: User cancelled Facebook authentication")
+                
+            }
+            else {
+                
+                print("Toby: Successfully authenticated with Facebook")
+                
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                
+                self.firebaseAutheticate(credential)
+                
+            }
+        }
+    }
 
+    
+    //FIREBASE CODE
+    
+    
+    
+    
+    func firebaseAutheticate(_ credential: AuthCredential)  {
+        
+        Auth.auth().signIn(with: credential, completion: {(user, error) in
+            if error != nil {
+                
+                print("Toby: Unable to authenticate with Firebase - \(String(describing: error))")
+                
+            } else {
+                
+                print("Toby: Succuessfully Autheticated with Firebase")
+            }
+            
+        })
+            
+    }
+ 
 }
 
