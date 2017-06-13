@@ -8,8 +8,10 @@
 
 import UIKit
 import FBSDKLoginKit
-import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
+import FBSDKLoginKit
+
 
 class SignInVC: UIViewController {
 
@@ -19,15 +21,16 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            print("JESS: ID found in keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+
     
     //FACEBOOK CODE
     
@@ -67,46 +70,59 @@ class SignInVC: UIViewController {
     
     func firebaseAutheticate(_ credential: AuthCredential)  {
         
-        Auth.auth().signIn(with: credential, completion: {(user, error) in
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                
-                print("Toby: Unable to authenticate with Firebase - \(String(describing: error))")
-                
+                print("JESS: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
-                
-                print("Toby: Succuessfully Autheticated with Firebase")
+                print("JESS: Successfully authenticated with Firebase")
+                if let user = user {
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
+                }
             }
-            
         })
-            
-    }
+        
+   }
+                
+
     @IBAction func signInTapped(_ sender: Any) {
         
+
         if let email = emailField.text, let pwd = passcode.text {
-            
-            Auth.auth().signIn(withEmail: email, password: pwd, completion: {(user, error) in
-            
+            Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
-                    
-                    print ("Toby: Successfull Firebase-Email User Identification")
+                    print("JESS: Email user authenticated with Firebase")
+                    if let user = user {
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
+                    }
                 } else {
-                    
-                    Auth.auth().createUser(withEmail: email, password: pwd, completion: {(user, error) in
-                        
+                    Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
-                            
-                            print("Toby: Unable to authenticate with Firebase-Email")
-                        }  else {
-                            
-                            print("Toby: Successfully autheticated with Firebase-Email")
+                            print("JESS: Unable to authenticate with Firebase using email")
+                        } else {
+                            print("JESS: Successfully authenticated with Firebase")
+                            if let user = user {
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
                         }
                     })
                 }
-
-        })
-        
-        
+            })
         }
- 
     }
+
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
+
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("JESS: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
+    
 }
+
+
+
