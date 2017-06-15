@@ -19,9 +19,10 @@ class FeedVC: UIViewController {
 
     @IBAction func signInTapped(_ sender: Any) {
         
-        //let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("Toby: ID removed from keychain \(keychainResult)")
+
+        
         try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }

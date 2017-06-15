@@ -20,6 +20,7 @@
 		311A7E091EE950F400569661 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7E081EE950F400569661 /* RoundButton.swift */; };
 		311A7E0B1EE9534700569661 /* FancyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7E0A1EE9534700569661 /* FancyText.swift */; };
 		311A7E0D1EE955BE00569661 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7E0C1EE955BE00569661 /* fancyButton.swift */; };
+		314DE9ED1EF11D7C005A9AE5 /* CIrcleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */; };
 		315677B01EEFF8550047775D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315677AF1EEFF8550047775D /* FeedVC.swift */; };
 		FF494DDEAD583BF9DC0786C0 /* Pods_Union_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06606D063FE478B939344822 /* Pods_Union_Social.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		311A7E081EE950F400569661 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		311A7E0A1EE9534700569661 /* FancyText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyText.swift; sourceTree = "<group>"; };
 		311A7E0C1EE955BE00569661 /* fancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
+		314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIrcleView.swift; sourceTree = "<group>"; };
 		315677AE1EEFBACA0047775D /* Union Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Union Social.entitlements"; sourceTree = "<group>"; };
 		315677AF1EEFF8550047775D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		65C695E43F4DF245AA12D0C2 /* Pods-Union Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Union Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Union Social/Pods-Union Social.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				311A7E081EE950F400569661 /* RoundButton.swift */,
 				311A7E0A1EE9534700569661 /* FancyText.swift */,
 				311A7E0C1EE955BE00569661 /* fancyButton.swift */,
+				314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				311A7E091EE950F400569661 /* RoundButton.swift in Sources */,
 				311A7E0D1EE955BE00569661 /* fancyButton.swift in Sources */,
 				311A7E071EE94F0800569661 /* Constants.swift in Sources */,
+				314DE9ED1EF11D7C005A9AE5 /* CIrcleView.swift in Sources */,
 				311A7DD61EE6A0EB00569661 /* SignInVC.swift in Sources */,
 				311A7DDC1EE6A0EB00569661 /* Union_Social.xcdatamodeld in Sources */,
 				311A7E0B1EE9534700569661 /* FancyText.swift in Sources */,
