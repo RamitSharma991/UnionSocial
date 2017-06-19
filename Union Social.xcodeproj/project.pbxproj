@@ -22,6 +22,7 @@
 		311A7E0D1EE955BE00569661 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311A7E0C1EE955BE00569661 /* fancyButton.swift */; };
 		314DE9ED1EF11D7C005A9AE5 /* CIrcleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */; };
 		315677B01EEFF8550047775D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315677AF1EEFF8550047775D /* FeedVC.swift */; };
+		31FD36941EF26C0E001659D7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD36931EF26C0E001659D7 /* PostCell.swift */; };
 		FF494DDEAD583BF9DC0786C0 /* Pods_Union_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06606D063FE478B939344822 /* Pods_Union_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIrcleView.swift; sourceTree = "<group>"; };
 		315677AE1EEFBACA0047775D /* Union Social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Union Social.entitlements"; sourceTree = "<group>"; };
 		315677AF1EEFF8550047775D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		31FD36931EF26C0E001659D7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		65C695E43F4DF245AA12D0C2 /* Pods-Union Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Union Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Union Social/Pods-Union Social.debug.xcconfig"; sourceTree = "<group>"; };
 		E3512F1F6D36E61D1E3B3A30 /* Pods_Union_SocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Union_SocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +148,7 @@
 				311A7E0A1EE9534700569661 /* FancyText.swift */,
 				311A7E0C1EE955BE00569661 /* fancyButton.swift */,
 				314DE9EC1EF11D7C005A9AE5 /* CIrcleView.swift */,
+				31FD36931EF26C0E001659D7 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				311A7DD61EE6A0EB00569661 /* SignInVC.swift in Sources */,
 				311A7DDC1EE6A0EB00569661 /* Union_Social.xcdatamodeld in Sources */,
 				311A7E0B1EE9534700569661 /* FancyText.swift in Sources */,
+				31FD36941EF26C0E001659D7 /* PostCell.swift in Sources */,
 				311A7E041EE94E7900569661 /* FancyView.swift in Sources */,
 				311A7DD41EE6A0EB00569661 /* AppDelegate.swift in Sources */,
 			);
