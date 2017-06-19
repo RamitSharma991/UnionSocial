@@ -168,8 +168,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yb-wW-Fek" userLabel="Fancy View 2" customClass="FancyView" customModule="Union_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-FH-zFg">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-FH-zFg">
                                         <rect key="frame" x="20" y="35" width="60" height="40"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="aF0-Vc-r1b"/>
                                             <constraint firstAttribute="height" constant="40" id="rdH-Nc-bWM"/>
@@ -179,6 +180,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="xvZ-ga-Ma5" appends="YES" id="BB0-zc-l2g"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwO-Wm-0cd">
                                         <rect key="frame" x="137.5" y="34.5" width="100" height="41"/>
@@ -213,7 +217,7 @@
                                                     <constraint firstAttribute="width" constant="54" id="lV4-RQ-v9p"/>
                                                 </constraints>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  ......Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-O0-eo5" userLabel="Fancy Text 2" customClass="FancyText" customModule="Union_Social" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  ....  Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-O0-eo5" userLabel="Fancy Text 2" customClass="FancyText" customModule="Union_Social" customModuleProvider="target">
                                                 <rect key="frame" x="64" y="0.0" width="199" height="54"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -244,7 +248,7 @@
                                 <rect key="frame" x="0.0" y="215" width="375" height="452"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="293" id="pBj-ez-7mq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="293" id="pBj-ez-7mq">
                                         <rect key="frame" x="0.0" y="28" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pBj-ez-7mq" id="Uz1-Dm-bt6">
@@ -357,6 +361,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRG-S4-hBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xvZ-ga-Ma5">
+                    <connections>
+                        <action selector="signOutTapped:" destination="XaF-2c-EcY" id="Gci-b8-PJ5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="813.60000000000002" y="-9.4452773613193415"/>
         </scene>
