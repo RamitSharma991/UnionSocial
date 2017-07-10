@@ -14,6 +14,12 @@ class PostCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var postImage: UIImageView!
+    @IBOutlet weak var caption: UITextView!
+    @IBOutlet weak var likesLabel: UILabel!
 
 
 }

@@ -246,9 +246,9 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="293" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aD8-3m-esQ">
                                 <rect key="frame" x="0.0" y="215" width="375" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="293" id="pBj-ez-7mq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="293" id="pBj-ez-7mq" customClass="PostCell" customModule="Union_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="293"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pBj-ez-7mq" id="Uz1-Dm-bt6">
@@ -277,7 +277,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="cRS-nc-YkU" customClass="CIrcleView" customModule="Union_Social" customModuleProvider="target">
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="cRS-nc-YkU">
                                                                             <rect key="frame" x="267" y="0.0" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="60" id="Pmw-hd-NHm"/>
@@ -292,6 +292,9 @@
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-dv-RAB">
                                                                     <rect key="frame" x="0.0" y="169.5" width="327" height="60"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="bky-mV-2b2"/>
+                                                                    </constraints>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
@@ -338,6 +341,13 @@
                                                 <constraint firstItem="8K7-bz-eTN" firstAttribute="leading" secondItem="Uz1-Dm-bt6" secondAttribute="leading" constant="16" id="ycK-8F-wWo"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="gAa-dv-RAB" id="nag-bf-XeR"/>
+                                            <outlet property="likesLabel" destination="2T0-Q4-ALF" id="LFI-CX-8Ca"/>
+                                            <outlet property="postImage" destination="TQn-FW-vnB" id="aer-bE-K31"/>
+                                            <outlet property="profileImage" destination="sKx-3p-lJN" id="gXF-uy-7HV"/>
+                                            <outlet property="usernameLabel" destination="wel-ht-P5G" id="IT4-M8-dLd"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -357,6 +367,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myTableView" destination="aD8-3m-esQ" id="13f-99-1AI"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="u2P-w9-cn5"/>
                     </connections>
                 </viewController>
